@@ -1,37 +1,37 @@
 let posts = [
   {
     author: "tagesschlau",
-    image: xxxxx,
+    image: "xxxxx",
     description: "Heute im Tagesjornal",
     location: "München",
   },
   {
     author: "fabi.z",
-    image: xxxxx,
+    image: "xxxxx",
     description: "New Post online!",
     location: "",
   },
   {
     author: "pz.rs3",
-    image: xxxxx,
+    image: "",
     description: "",
     location: "Regensburg",
   },
   {
     author: "ines.glas",
-    image: xxxxx,
+    image: "xxxxx",
     description: "Hello Friends :)",
     location: "Abensberg",
   },
   {
     author: "jessy.n",
-    image: xxxxx,
+    image: "xxxxx",
     description: "New Day!",
     location: "Regensburg",
   },
   {
     author: "njetflix",
-    image: xxxxx,
+    image: "xxxxx",
     description:
       "die neue Staffel - Developer für Quereinsteiger! Nicht verpassen",
     location: "",
