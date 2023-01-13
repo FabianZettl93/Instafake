@@ -4,24 +4,31 @@
   gap: 8px;
 }
 
-.h1 {
+h1 {
+  margin-left: 20px;
+  margin-top: 30px;
 }
 
-.homepage {
+.nav-list {
+  margin-top: 50px;
+  width: 250px;
+  height: 1200px;
+  box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%);
+}
+
+.nav-list-words {
+  margin-left: 12px;
+  margin-bottom: 8px;
+  font-size: 18px;
 }
 
 .buttons {
   display: flex;
-  height: 35px;
+  height: 35px px;
   width: 35px;
   margin-top: 8px;
   margin-bottom: 8px;
   margin-left: 8px;
   margin-right: 8px;
-}
-
-.button-arrow {
-  display: flex;
-  height: 35px;
-  width: 35px;
+  align-items: center;
 }
