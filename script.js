@@ -46,7 +46,7 @@ function show(params) {
     const post = posts[i];
 
     document.getElementById("content").innerHTML += `
-    <div>
+    <div class="onlypost">
         <img src"${post["image"]}">
         <div>${post["author"]}</div>
         <div>${post["discription"]}</div>
