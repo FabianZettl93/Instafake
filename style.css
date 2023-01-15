@@ -1,10 +1,8 @@
-.main-page {
+body {
+  font-family: "Roboto", sans-serif;
+  height: 200vh;
   display: flex;
   justify-content: center;
-}
-
-.feed-container {
-}
-
-.proposals {
+  background-color: rgba(128, 128, 128, 0.1);
+  margin: 0;
 }
