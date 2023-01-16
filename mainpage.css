@@ -44,3 +44,123 @@
     rgb(255, 157, 0);
   cursor: pointer;
 }
+
+.post {
+  position: relative;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.post-img {
+  height: 338px;
+  object-fit: cover;
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+}
+.post-header-left {
+  display: flex;
+  align-items: center;
+  padding: 12px 10px;
+}
+
+.author-location-container {
+  padding-left: 8px;
+}
+
+.author-img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.locations {
+  font-size: 12px;
+  padding-top: 3px;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 8px;
+  margin-top: 8px;
+}
+
+.action-buttons-left {
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+  margin-top: 5px;
+}
+
+.action-buttons-left img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.action-button-right {
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.action-button-right img {
+  width: 32px;
+  height: 30px;
+}
+.points-text {
+  font-size: 20px;
+  padding-right: 12px;
+}
+
+.comment-input {
+  outline: unset;
+  border: none;
+}
+
+.post-button {
+  color: lightblue;
+  font-size: 14px;
+  opacity: 0.5;
+  font-weight: bold;
+  position: absolut;
+  right: 5px;
+  bottom: 5px;
+  margin-left: 120px;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.post-comment-container {
+  border-top: 1px solid rgb(235, 233, 233);
+  display: flex;
+  align-items: center;
+  padding: 12px 10px;
+  position: relative;
+}
+
+.comment-smiley {
+  margin-right: 8px;
+  height: 20px;
+}
+
+.likes-author {
+  padding: 4px 10px;
+  margin: 0;
+}
+
+.time-ago {
+  font-size: 10px;
+  margin-left: 10px;
+}

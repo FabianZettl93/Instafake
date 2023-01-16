@@ -50,6 +50,13 @@
   gap: 30px;
 }
 
-.header-right img {
+.header-right-img {
   height: 30px;
+}
+
+.myprofilpic {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 100%;
 }
