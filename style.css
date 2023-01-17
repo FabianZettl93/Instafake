@@ -6,3 +6,7 @@ body {
   background-color: rgba(128, 128, 128, 0.1);
   margin: 0;
 }
+
+.d-none {
+  display: none !important;
+}

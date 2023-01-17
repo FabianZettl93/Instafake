@@ -22,6 +22,7 @@
   margin-bottom: 20px;
   margin-top: 100px;
   gap: 15px;
+  overflow-x: auto;
 }
 
 .storys-friends {
@@ -114,6 +115,17 @@
   cursor: pointer;
 }
 
+.action-button-right-black {
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.action-button-right-black img {
+  width: 32px;
+  height: 30px;
+}
+
 .action-button-right img {
   width: 32px;
   height: 30px;
@@ -158,9 +170,108 @@
 .likes-author {
   padding: 4px 10px;
   margin: 0;
+  font-size: 14px;
 }
 
 .time-ago {
   font-size: 10px;
   margin-left: 10px;
+}
+
+.end-of-content {
+  position: relative;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.end-of-content img {
+  width: 100px;
+  margin-top: 20px;
+}
+
+.eoc-p1 {
+  margin-bottom: 8px;
+}
+.eoc-p2 {
+  font-size: 12px;
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.main-page-right-side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 45%;
+  height: 500px;
+  margin-top: 125px;
+  margin-left: 30px;
+}
+
+.mp-right-side-header {
+  width: 150%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.img-and-name {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.img-and-name img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 100%;
+}
+
+.text-blue {
+  color: rgba(18, 82, 244, 0.912);
+  font-size: 12px;
+  cursor: pointer;
+  margin-left: 70px;
+}
+
+.vorschaege {
+  display: flex;
+  justify-content: space-between;
+}
+
+.vfd {
+  margin-right: 40px;
+  color: gray;
+  font-size: 13px;
+  width: 279px;
+}
+
+.aa {
+  font-size: 13px;
+  cursor: pointer;
+  margin-left: 18px;
+}
+
+.rightesidesubcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.rightesidesubcontainer img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+.info {
 }

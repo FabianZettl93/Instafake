@@ -56,7 +56,63 @@ let cards = [
   },
 ];
 
-function show() {
+let stories = [
+  {
+    author: "pz.rs3",
+    image: "img/monalisa.jpg",
+  },
+  {
+    author: "ines.glas",
+    image: "img/monalisa.jpg",
+  },
+  {
+    author: "jessi.n",
+    image: "img/monalisa.jpg",
+  },
+  {
+    author: "tagesschlau",
+    image: "img/monalisa.jpg",
+  },
+  {
+    author: "pz.rs3",
+    image: "img/monalisa.jpg",
+  },
+  {
+    author: "ines.glas",
+    image: "img/monalisa.jpg",
+  },
+  {
+    author: "jessi.n",
+    image: "img/monalisa.jpg",
+  },
+  {
+    author: "tagesschlau",
+    image: "img/monalisa.jpg",
+  },
+];
+
+function init() {
+  renderNewStorys();
+  renderPosts();
+}
+
+function renderNewStorys() {
+  let storiesContent = document.getElementById("newStoryContainer");
+  storiesContent.innerHTML = "";
+
+  for (let i = 0; i < stories.length; i++) {
+    const story = stories[i];
+
+    document.getElementById("newStoryContainer").innerHTML += /*html*/ `
+          <div class="storys-friends">
+          <img class="post-img" src="${story["image"]}">
+          <div>${story["author"]}</div>
+              </div>
+    `;
+  }
+}
+
+function renderPosts() {
   let content = document.getElementById("card");
   content.innerHTML = "";
 
@@ -83,15 +139,20 @@ function show() {
         <img class="post-img" src="${card["image"]}">
         <div class="action-buttons">
         <div class="action-buttons-left">
-          <img src="img/heart.png" alt="">
+          <img class="like-withe" id="likeWithe${i}" onclick="likeRed(${i})" src="img/heart.png" alt="">
+          <img class="like-red d-none" id="likeRed${i}" onclick="likeWithe(${i})" src="img/heart-red.ico" alt="">
           <img src="img/chat_bubble_icon_176160.png" alt="">
           <img src="img/send.png" alt="">
         </div>
-        <div class="action-button-right"><img src="img/bookmark-white (1).png" alt=""></div>
+
+        <img class="action-button-right" id="bookWhite${i}" onclick="bookBlack(${i})" src="img/bookmark-white (1).png" alt="">
+          <img class="action-button-right-black d-none" id="bookBlack${i}" onclick="bookWhite(${i})" src="img/bookmark-black.png" alt="">
+          
       </div>
         
-        <p class="likes-author"> Gefällt ${card["likes"]} Mal</p>
+        <p class="likes-author"> <b>Gefällt ${card["likes"]} Mal</b></p>
         <p class="likes-author"> <b> ${card["author"]} </b> ${card["description"]}</p>
+
         <p class="time-ago">${card["timeAgo"]}</p>
         <div class="post-comment-container"> 
           <img class="comment-smiley" src="img/emoticon-30-24.ico" alt="">
@@ -99,8 +160,26 @@ function show() {
           <button id="postButton" onclick="post()" class="post-button">Posten</button>
         </div>
 
-       
-
-    </div>`;
+     </div>`;
   }
+}
+
+function likeRed(i) {
+  document.getElementById(`likeRed${i}`).classList.remove("d-none");
+  document.getElementById(`likeWithe${i}`).classList.add("d-none");
+}
+
+function likeWithe(i) {
+  document.getElementById(`likeRed${i}`).classList.add("d-none");
+  document.getElementById(`likeWithe${i}`).classList.remove("d-none");
+}
+
+function bookBlack(i) {
+  document.getElementById(`bookBlack${i}`).classList.remove("d-none");
+  document.getElementById(`bookWhite${i}`).classList.add("d-none");
+}
+
+function bookWhite(i) {
+  document.getElementById(`bookBlack${i}`).classList.add("d-none");
+  document.getElementById(`bookWhite${i}`).classList.remove("d-none");
 }
