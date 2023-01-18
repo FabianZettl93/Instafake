@@ -224,7 +224,7 @@
 .img-and-name {
   display: flex;
   align-items: center;
-  gap: 20px;
+
   cursor: pointer;
 }
 
@@ -233,13 +233,23 @@
   height: 50px;
   cursor: pointer;
   border-radius: 100%;
+  object-fit: cover;
 }
 
 .text-blue {
   color: rgba(18, 82, 244, 0.912);
   font-size: 12px;
   cursor: pointer;
-  margin-left: 70px;
+  margin-left: 117px;
+  margin-right: 115px;
+}
+
+.text-blue-c {
+  color: rgba(18, 82, 244, 0.912);
+  font-size: 12px;
+  cursor: pointer;
+  margin-left: 100px;
+  margin-right: 115px;
 }
 
 .vorschaege {
@@ -271,7 +281,23 @@
   width: 40px;
   height: 40px;
   border-radius: 100%;
+  display: flex;
 }
 
-.info {
+.righteside {
+  display: flex;
+  padding: 8px 0px;
+  align-items: center;
+}
+
+.styleRightSide {
+  display: flex;
+  flex-direction: column;
+}
+
+.acc-name {
+  display: flex;
+  width: 100px;
+  gap: 10px;
+  align-items: center;
 }

@@ -2,7 +2,7 @@ let cards = [
   {
     author: "tagesschlau",
     image: "img/posts (1).jpg",
-    profilImage: "img/monalisa.jpg",
+    profilImage: "img/20220418_133141.jpg",
     description: "Heute im Tagesjornal",
     location: "München",
     likes: 3812,
@@ -11,7 +11,7 @@ let cards = [
   {
     author: "fabi.z",
     image: "img/posts (2).jpg",
-    profilImage: "img/monalisa.jpg",
+    profilImage: "img/IMG-20220306-WA0010.jpg",
     description: "New Post online!",
     location: "",
     likes: 341,
@@ -20,7 +20,7 @@ let cards = [
   {
     author: "pz.rs3",
     image: "img/posts (3).jpg",
-    profilImage: "img/monalisa.jpg",
+    profilImage: "img/20211212_141251.jpg",
     description: "",
     location: "Regensburg",
     likes: 98,
@@ -29,7 +29,7 @@ let cards = [
   {
     author: "ines.glas",
     image: "img/posts (4).jpg",
-    profilImage: "img/monalisa.jpg",
+    profilImage: "img/IMG-20211128-WA0031.jpg",
     description: "Hello Friends :)",
     location: "Abensberg",
     likes: 6,
@@ -37,7 +37,7 @@ let cards = [
   },
   {
     author: "jessy.n",
-    profilImage: "img/monalisa.jpg",
+    profilImage: "img/IMG-20211128-WA0051.jpg",
     image: "img/posts (5).jpg",
     description: "New Day!",
     location: "Regensburg",
@@ -59,41 +59,89 @@ let cards = [
 let stories = [
   {
     author: "pz.rs3",
-    image: "img/monalisa.jpg",
+    image: "img/20211212_141251.jpg",
   },
   {
     author: "ines.glas",
-    image: "img/monalisa.jpg",
+    image: "img/IMG-20211128-WA0031.jpg",
   },
   {
     author: "jessi.n",
-    image: "img/monalisa.jpg",
+    image: "img/IMG-20211128-WA0051.jpg",
   },
   {
     author: "tagesschlau",
-    image: "img/monalisa.jpg",
+    image: "img/20220418_133141.jpg",
   },
   {
     author: "pz.rs3",
-    image: "img/monalisa.jpg",
+    image: "img/20211212_141251.jpg",
   },
   {
     author: "ines.glas",
-    image: "img/monalisa.jpg",
+    image: "img/IMG-20211128-WA0031.jpg",
   },
   {
-    author: "jessi.n",
-    image: "img/monalisa.jpg",
+    author: "fabi.z",
+    image: "img/IMG-20220306-WA0010.jpg",
   },
   {
     author: "tagesschlau",
+    image: "img/20220418_133141.jpg",
+  },
+];
+
+let rightSubs = [
+  {
+    image: "img/20211121_143846.jpg",
+    author: "Hannes.n",
+  },
+  {
+    image: "img/20211030_171552.jpg",
+    author: "marcow",
+  },
+  {
     image: "img/monalisa.jpg",
+    author: "christio.pohl",
+  },
+  {
+    image: "img/monalisa.jpg",
+    author: "georg.l",
+  },
+  {
+    image: "img/monalisa.jpg",
+    author: "nico.sdl",
   },
 ];
 
 function init() {
   renderNewStorys();
   renderPosts();
+  renderRightSide();
+}
+
+function renderRightSide() {
+  let newFollowers = document.getElementById("newFollowers");
+  newFollowers.innerHTML = "";
+
+  for (let i = 0; i < rightSubs.length; i++) {
+    const rightSub = rightSubs[i];
+
+    document.getElementById("newFollowers").innerHTML += /*html*/ `
+   <div class="righteside" id="rightSide">
+              <div class="rightesidesubcontainer" id="rightSideSubContainer">
+                <div class="acc-name">
+              <img src="${rightSub["image"]}">
+             
+              <div>${rightSub["author"]}</div>
+                  </div>
+              </div>
+              <span  id="folgen${i}" class="text-blue">Folgen</span>
+              
+
+            </div>
+    `;
+  }
 }
 
 function renderNewStorys() {
@@ -123,7 +171,7 @@ function renderPosts() {
     <div class="post">
           <div class="post-header">
             <div class="post-header-left">
-              <div> <img class="author-img" src="img/monalisa.jpg" alt=""></div>
+              <div> <img class="author-img" src="${card["profilImage"]}" alt=""></div>
 
               <div class="author-location-container">  
 
@@ -157,7 +205,7 @@ function renderPosts() {
         <div class="post-comment-container"> 
           <img class="comment-smiley" src="img/emoticon-30-24.ico" alt="">
           <input placeholder="Kommentieren ..."class="comment-input" type="text"> 
-          <button id="postButton" onclick="post()" class="post-button">Posten</button>
+          <button id="postButton" onclick="addComment()" class="post-button">Posten</button>
         </div>
 
      </div>`;
