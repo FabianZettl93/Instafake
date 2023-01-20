@@ -1,12 +1,13 @@
 let cards = [
   {
-    author: "tagesschlau",
+    author: "smf",
     image: "img/posts (1).jpg",
     profilImage: "img/20220418_133141.jpg",
-    description: "Heute im Tagesjornal",
+    description: "Ready to hit the street in 2023.. braaap",
     location: "München",
     likes: 3812,
     timeAgo: "VOR 2 STUNDEN",
+    comment: [],
   },
   {
     author: "fabi.z",
@@ -16,6 +17,7 @@ let cards = [
     location: "",
     likes: 341,
     timeAgo: "VOR 4 STUNDEN",
+    comment: [],
   },
   {
     author: "pz.rs3",
@@ -25,6 +27,7 @@ let cards = [
     location: "Regensburg",
     likes: 98,
     timeAgo: "VOR 5 STUNDEN",
+    comment: [],
   },
   {
     author: "ines.glas",
@@ -34,6 +37,7 @@ let cards = [
     location: "Abensberg",
     likes: 6,
     timeAgo: "VOR 6 STUNDEN",
+    comment: [],
   },
   {
     author: "jessy.n",
@@ -43,6 +47,7 @@ let cards = [
     location: "Regensburg",
     likes: 39,
     timeAgo: "VOR 2 TAGEN",
+    comment: [],
   },
   {
     author: "njetflix",
@@ -53,6 +58,7 @@ let cards = [
     location: "",
     likes: 2385,
     timeAgo: "VOR 2 TAGEN",
+    comment: [],
   },
 ];
 
@@ -101,15 +107,15 @@ let rightSubs = [
     author: "marcow",
   },
   {
-    image: "img/monalisa.jpg",
+    image: "img/_DSC3735.jpg",
     author: "christio.pohl",
   },
   {
-    image: "img/monalisa.jpg",
+    image: "img/20210925_235018.jpg",
     author: "georg.l",
   },
   {
-    image: "img/monalisa.jpg",
+    image: "img/20210706_192739.jpg",
     author: "nico.sdl",
   },
 ];
@@ -201,11 +207,14 @@ function renderPosts() {
         <p class="likes-author"> <b>Gefällt ${card["likes"]} Mal</b></p>
         <p class="likes-author"> <b> ${card["author"]} </b> ${card["description"]}</p>
 
+        <div class="comments-design" id="comments${i}"> </div>   
+                
+
         <p class="time-ago">${card["timeAgo"]}</p>
         <div class="post-comment-container"> 
           <img class="comment-smiley" src="img/emoticon-30-24.ico" alt="">
-          <input placeholder="Kommentieren ..."class="comment-input" type="text"> 
-          <button id="postButton" onclick="addComment()" class="post-button">Posten</button>
+          <input id="commentText${i}" placeholder="Kommentieren ..."class="comment-input" type="text"> 
+          <button id="postButton" onclick=addComment(${i}) class="post-button">Posten</button>
         </div>
 
      </div>`;
@@ -230,4 +239,21 @@ function bookBlack(i) {
 function bookWhite(i) {
   document.getElementById(`bookBlack${i}`).classList.add("d-none");
   document.getElementById(`bookWhite${i}`).classList.remove("d-none");
+}
+
+function addComment(index) {
+  let commentText = document.getElementById(`commentText${index}`);
+  cards[index]["comment"].push(commentText.value);
+  renderPosts();
+  commentText.value = "";
+  renderComment(index);
+}
+
+function renderComment(index) {
+  let comments = document.getElementById(`comments${index}`);
+
+  for (let j = 0; j < cards[index]["comment"].length; j++) {
+    const comment = cards[index]["comment"][j];
+    comments.innerHTML += `<div> <b>fabi.z</b>  ${comment}</div>`;
+  }
 }

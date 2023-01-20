@@ -116,9 +116,11 @@
 }
 
 .action-button-right-black {
-  width: 30px;
-  height: 24px;
+  width: 17px;
+  height: 14px;
   cursor: pointer;
+  padding-right: 7px;
+  padding-top: 5px;
 }
 
 .action-button-right-black img {
@@ -152,6 +154,7 @@
   padding: 0;
   border: none;
   background: none;
+  cursor: pointer;
 }
 
 .post-comment-container {
@@ -282,6 +285,7 @@
   height: 40px;
   border-radius: 100%;
   display: flex;
+  object-fit: cover;
 }
 
 .righteside {
@@ -300,4 +304,9 @@
   width: 100px;
   gap: 10px;
   align-items: center;
+}
+
+.comments-design {
+  margin-left: 10px;
+  font-size: 12px;
 }
