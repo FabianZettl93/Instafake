@@ -174,7 +174,7 @@ function renderPosts() {
     const card = cards[i];
 
     document.getElementById("card").innerHTML += /*html*/ `
-    <div class="post">
+    <div class="post mobilecontent">
           <div class="post-header">
             <div class="post-header-left">
               <div> <img class="author-img" src="${card["profilImage"]}" alt=""></div>
