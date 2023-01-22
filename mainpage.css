@@ -288,6 +288,10 @@
   object-fit: cover;
 }
 
+.endeimg {
+  border-radius: 100%;
+}
+
 .righteside {
   display: flex;
   padding: 8px 0px;
